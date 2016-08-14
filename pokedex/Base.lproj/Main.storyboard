@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-RY-PJv" userLabel="bg">
-                                <rect key="frame" x="0.0" y="48" width="600" height="552"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-RY-PJv" userLabel="bg">
+                                <rect key="frame" x="0.0" y="92" width="600" height="508"/>
                             </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3A0-Mp-MiH">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="47"/>
@@ -27,19 +28,73 @@
                                     <constraint firstAttribute="height" constant="55" id="QPQ-Ks-cZH"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s09-ai-baW">
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="s09-ai-baW">
                                 <rect key="frame" x="0.0" y="48" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vu9-0k-O1f">
+                                <rect key="frame" x="12" y="101" width="563" height="479"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i5s-dc-I66">
+                                    <size key="itemSize" width="110" height="110"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nWd-Yb-wxz">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="jae-pE-2Du">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="90"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiQ-EG-7v5">
+                                                    <rect key="frame" x="0.0" y="89" width="110" height="21"/>
+                                                    <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="uiB-wC-fbf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="HiQ-EG-7v5" firstAttribute="leading" secondItem="nWd-Yb-wxz" secondAttribute="leading" id="ASW-p1-vOP"/>
+                                            <constraint firstItem="jae-pE-2Du" firstAttribute="top" secondItem="nWd-Yb-wxz" secondAttribute="top" id="L7D-nW-8FJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="HiQ-EG-7v5" secondAttribute="bottom" id="VRe-Nf-AQ2"/>
+                                            <constraint firstItem="HiQ-EG-7v5" firstAttribute="top" secondItem="jae-pE-2Du" secondAttribute="bottom" id="XBl-Q5-INq"/>
+                                            <constraint firstAttribute="trailing" secondItem="HiQ-EG-7v5" secondAttribute="trailing" id="hOV-TA-6mR"/>
+                                            <constraint firstAttribute="trailing" secondItem="jae-pE-2Du" secondAttribute="trailing" id="s3N-1k-Sa5"/>
+                                            <constraint firstItem="jae-pE-2Du" firstAttribute="leading" secondItem="nWd-Yb-wxz" secondAttribute="leading" id="xkg-Ce-8Jl"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="s09-ai-baW" secondAttribute="trailing" id="AKZ-vY-Ayi"/>
+                            <constraint firstAttribute="trailing" secondItem="vu9-0k-O1f" secondAttribute="trailing" constant="20" id="La3-ZS-yPD"/>
                             <constraint firstItem="3A0-Mp-MiH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NFz-0z-f6g"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vu9-0k-O1f" secondAttribute="bottom" constant="20" id="TVN-yM-47a"/>
+                            <constraint firstItem="VNg-RY-PJv" firstAttribute="top" secondItem="s09-ai-baW" secondAttribute="bottom" id="V7c-OA-gRr"/>
                             <constraint firstItem="3A0-Mp-MiH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WAu-Oh-Sup"/>
+                            <constraint firstItem="vu9-0k-O1f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bXM-hm-e4Z"/>
                             <constraint firstItem="s09-ai-baW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ePa-R0-pnz"/>
                             <constraint firstAttribute="trailing" secondItem="3A0-Mp-MiH" secondAttribute="trailing" id="gql-0t-ovd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VNg-RY-PJv" secondAttribute="bottom" id="jIY-Vt-zFg"/>
+                            <constraint firstItem="VNg-RY-PJv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="mXz-LB-yN0"/>
                             <constraint firstItem="s09-ai-baW" firstAttribute="top" secondItem="3A0-Mp-MiH" secondAttribute="bottom" constant="1" id="qDI-l9-Pvg"/>
+                            <constraint firstItem="vu9-0k-O1f" firstAttribute="top" secondItem="s09-ai-baW" secondAttribute="bottom" constant="20" id="sN6-X3-h1T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VNg-RY-PJv" secondAttribute="trailing" constant="-20" id="xrU-E7-nfE"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -49,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
     </resources>
 </document>
