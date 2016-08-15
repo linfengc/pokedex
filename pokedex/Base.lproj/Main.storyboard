@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,13 +26,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-RY-PJv" userLabel="bg">
                                 <rect key="frame" x="0.0" y="92" width="600" height="508"/>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3A0-Mp-MiH">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="47"/>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="QPQ-Ks-cZH"/>
-                                </constraints>
-                            </view>
                             <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="s09-ai-baW">
                                 <rect key="frame" x="0.0" y="48" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -82,6 +80,40 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3A0-Mp-MiH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khe-fr-kxl">
+                                        <rect key="frame" x="245" y="5" width="111" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="1LF-0l-mcs"/>
+                                            <constraint firstAttribute="height" constant="37" id="7v2-HG-xR4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivV-Lc-eUC">
+                                        <rect key="frame" x="558" y="10" width="34" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="foP-6Y-S7p"/>
+                                            <constraint firstAttribute="width" constant="32" id="lqa-68-5ko"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6jK-dr-WHj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ivV-Lc-eUC" secondAttribute="trailing" constant="8" id="KBs-nW-91J"/>
+                                    <constraint firstAttribute="height" constant="55" id="QPQ-Ks-cZH"/>
+                                    <constraint firstItem="khe-fr-kxl" firstAttribute="centerX" secondItem="3A0-Mp-MiH" secondAttribute="centerX" id="VOw-Le-5LJ"/>
+                                    <constraint firstItem="khe-fr-kxl" firstAttribute="centerY" secondItem="3A0-Mp-MiH" secondAttribute="centerY" id="XNQ-zh-a6b"/>
+                                    <constraint firstItem="ivV-Lc-eUC" firstAttribute="centerY" secondItem="3A0-Mp-MiH" secondAttribute="centerY" id="j8s-Cu-IJR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -107,11 +139,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="287"/>
+            <point key="canvasLocation" x="238" y="274"/>
         </scene>
     </scenes>
     <resources>
         <image name="1" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
