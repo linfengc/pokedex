@@ -42,17 +42,17 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nWd-Yb-wxz">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="nWd-Yb-wxz" customClass="PokeCell" customModule="pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="jae-pE-2Du">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="jae-pE-2Du" userLabel="thumbImg">
                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="90"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiQ-EG-7v5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiQ-EG-7v5" userLabel="nameLbl">
                                                     <rect key="frame" x="0.0" y="89" width="110" height="21"/>
                                                     <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -75,6 +75,10 @@
                                             <constraint firstAttribute="trailing" secondItem="jae-pE-2Du" secondAttribute="trailing" id="s3N-1k-Sa5"/>
                                             <constraint firstItem="jae-pE-2Du" firstAttribute="leading" secondItem="nWd-Yb-wxz" secondAttribute="leading" id="xkg-Ce-8Jl"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="HiQ-EG-7v5" id="5Mj-rY-PUh"/>
+                                            <outlet property="thumbImg" destination="jae-pE-2Du" id="42O-pb-u5Z"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -97,6 +101,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VNg-RY-PJv" secondAttribute="trailing" constant="-20" id="xrU-E7-nfE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="vu9-0k-O1f" id="oLQ-KK-0H5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
