@@ -2,7 +2,7 @@
 //  Pokemon.swift
 //  pokedex
 //
-//  Created by fredlin on 2016/8/14.
+//  Created by Fred Lin on 2016/8/14.
 //  Copyright © 2016年 fredlin. All rights reserved.
 //
 
