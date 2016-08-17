@@ -9,19 +9,24 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     //pokemon array for parsing
     var pokemon = [Pokemon]()
+    var filteredPokemon = [Pokemon]()
     var musicPlayer: AVAudioPlayer!
-    
+    var inSearchMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         collection.delegate = self
         collection.dataSource = self
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.Done
+        
         parsePokemonCSV()
         initAudio()
     }
@@ -66,8 +71,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PokeCell", forIndexPath: indexPath) as? PokeCell {
             
-        
-            let poke = pokemon[indexPath.row]
+            let poke: Pokemon!
+            if inSearchMode{
+                poke = filteredPokemon[indexPath.row]
+            }
+            else{
+                poke = pokemon[indexPath.row]
+            }
             
             cell.configureCell(poke)
             return cell
@@ -80,6 +90,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //when selection the cell
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        let poke: Pokemon!
+        
+        if inSearchMode{
+            poke = filteredPokemon[indexPath.row]
+        }
+        
+        else{
+            poke = pokemon[indexPath.row]
+        }
+        
+        //detailVC<#T##AnyObject?#>
+        performSegueWithIdentifier("PokemonDetailVC", sender: poke)
     }
     
     
@@ -90,27 +112,70 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 718
+        if inSearchMode{
+            return filteredPokemon.count
+        }
+        
+        return pokemon.count
     }
     
     
     
     
+
     
     
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSizeMake(105, 105) //Here the size is static but CGSizeMake can be used dynamically
     }
-    @IBAction func musicBtnPressed(sender: UIButton!) {
-        
+    
+    
+    @IBAction func musicBtnPressed(sender: UIButton) {
         if musicPlayer.playing{
             musicPlayer.stop()
+            sender.alpha = 0.2
         }
         else{
             musicPlayer.play()
+            sender.alpha = 1.0
         }
     }
+  
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == ""{
+            inSearchMode = false
+            view.endEditing(true) //force to end after empty
+            collection.reloadData()
+        }
+        else{
+            inSearchMode = true
+            // data is all lowercase
+            let lower = searchBar.text!.lowercaseString
+            //$0 is grabbing an element in that array
+            filteredPokemon = pokemon.filter({$0.name.rangeOfString(lower) != nil})
+            collection.reloadData()
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetailVC"{
+            if let detailsVC = segue.destinationViewController as? PokemonDetailVC{
+                if let poke = sender as? Pokemon{
+                    //pokemon clicked(aka sender)
+                    detailsVC.pokemon = poke
+                }
+            }
+        }
+    }
+   
+
+
 
 }
 
