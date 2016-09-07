@@ -14,7 +14,14 @@ class PokeDetailVC: UIViewController {
     
     
     
-    
+    @IBOutlet weak var defenseLbl: UILabel!
+    @IBOutlet weak var attackLbl: UILabel!
+    @IBOutlet weak var heightVal: UILabel!
+    @IBOutlet weak var weightVal: UILabel!
+    @IBOutlet weak var idLbl: UILabel!
+    @IBOutlet weak var idNum: UILabel!
+    @IBOutlet weak var backButton: NSLayoutConstraint!
+    @IBOutlet weak var selectedPokeImg: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     var pokemon: Pokemon!
     override func viewDidLoad() {
@@ -22,9 +29,32 @@ class PokeDetailVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nameLbl.text = pokemon.name
+        setUpView();
+        
+    }
+    
+    func setUpView(){
+        nameLbl.text = pokemon.name.capitalizedString
+        selectedPokeImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
+        idNum.text = "\(pokemon.pokedexId)"
+        //TO DO: parse weight and height and other info
+       // weightVal.text = (pokemon.weight)
+        //heightVal.text = (pokemon.height)
+        
+        
+        
     }
 
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

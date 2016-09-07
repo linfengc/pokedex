@@ -30,7 +30,12 @@ class Pokemon {
         return _pokedexId
     }
     
-    
+    var weight: String{
+        return _weight
+    }
+    var height: String{
+        return _height
+    }
     
     init(name: String, pokedexId: Int){
         _name = name

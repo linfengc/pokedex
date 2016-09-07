@@ -23,8 +23,18 @@
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue</string>
         </mutableArray>
         <mutableArray key="pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+            <string>PokemonSolidNormal</string>
+            <string>PokemonSolidNormal</string>
+            <string>PokemonSolidNormal</string>
+            <string>PokemonSolidNormal</string>
             <string>PokemonSolidNormal</string>
         </mutableArray>
     </customFonts>
@@ -465,6 +475,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFQ-So-k83">
+                                <rect key="frame" x="20" y="74" width="345" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="VlB-0u-irG">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="BwN-Vc-Gp0"/>
+                                            <constraint firstAttribute="height" constant="120" id="xLR-GT-JGf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description of each pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQU-4K-zuq">
+                                        <rect key="frame" x="120" y="0.0" width="225" height="120"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ku7-mF-82k">
+                                <rect key="frame" x="20" y="197" width="175" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Weight: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwH-di-2CC">
+                                        <rect key="frame" x="0.0" y="2" width="66" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.84764912560000005" blue="0.19976796290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="80lb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceE-Yd-ge6">
+                                        <rect key="frame" x="66" y="0.0" width="33" height="25"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Height: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ko7-a6-Ffc">
+                                        <rect key="frame" x="99" y="2" width="63" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.84764912560000005" blue="0.19976796290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2'" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9El-1f-UwA">
+                                        <rect key="frame" x="162" y="0.0" width="13" height="25"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-hm-Sec">
+                                <rect key="frame" x="20" y="246" width="295" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Attack: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU9-5p-4RP">
+                                        <rect key="frame" x="0.0" y="2" width="63" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.84764912560000005" blue="0.19976796290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="attckLbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urQ-8Q-GRc">
+                                        <rect key="frame" x="63" y="0.0" width="71" height="25"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Defense: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmx-iL-if9">
+                                        <rect key="frame" x="133" y="2" width="77" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.84764912560000005" blue="0.19976796290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="defenseLbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZd-0f-Ztm">
+                                        <rect key="frame" x="210" y="0.0" width="86" height="25"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wY1-Us-BuZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                 <subviews>
@@ -474,18 +556,45 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fit-Dd-6sP">
+                                        <rect key="frame" x="8" y="12" width="47" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="7Zk-rQ-S0b"/>
+                                            <constraint firstAttribute="height" constant="32" id="SZa-Yk-2kA"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="d5o-8U-AEh" eventType="touchUpInside" id="eyu-8D-a0t"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="718" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6S-yq-Oux">
+                                        <rect key="frame" x="550" y="18" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGQ-Zl-rbz">
+                                        <rect key="frame" x="504" y="12" width="38" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.84764912556464567" blue="0.19976796293254917" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="h6S-yq-Oux" secondAttribute="trailing" constant="8" id="2kD-yB-2w2"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="3CR-2E-GGq"/>
                                     <constraint firstItem="y1s-w9-3G7" firstAttribute="centerY" secondItem="wY1-Us-BuZ" secondAttribute="centerY" id="5gK-qT-oOB"/>
+                                    <constraint firstItem="fit-Dd-6sP" firstAttribute="leading" secondItem="wY1-Us-BuZ" secondAttribute="leading" constant="8" id="7Qk-6a-vc6"/>
+                                    <constraint firstItem="oGQ-Zl-rbz" firstAttribute="centerY" secondItem="wY1-Us-BuZ" secondAttribute="centerY" id="7rh-Js-sR0"/>
+                                    <constraint firstItem="fit-Dd-6sP" firstAttribute="centerY" secondItem="wY1-Us-BuZ" secondAttribute="centerY" id="DyT-XX-Qqv"/>
+                                    <constraint firstAttribute="trailing" secondItem="h6S-yq-Oux" secondAttribute="trailing" constant="8" id="E3U-v4-UWT"/>
                                     <constraint firstAttribute="height" constant="55" id="GNv-Ex-Vtu"/>
                                     <constraint firstItem="y1s-w9-3G7" firstAttribute="centerX" secondItem="wY1-Us-BuZ" secondAttribute="centerX" id="Vgs-Uk-7m0"/>
+                                    <constraint firstItem="h6S-yq-Oux" firstAttribute="leading" secondItem="oGQ-Zl-rbz" secondAttribute="trailing" constant="8" id="XvH-DR-MND"/>
+                                    <constraint firstItem="h6S-yq-Oux" firstAttribute="centerY" secondItem="wY1-Us-BuZ" secondAttribute="centerY" id="m8q-UL-bgU"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VlB-0u-irG">
-                                <rect key="frame" x="10" y="140" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -495,7 +604,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLbl" destination="urQ-8Q-GRc" id="Kxs-YT-OGH"/>
+                        <outlet property="backButton" destination="DyT-XX-Qqv" id="lly-8j-noT"/>
+                        <outlet property="defenseLbl" destination="PZd-0f-Ztm" id="SbL-ff-Tup"/>
+                        <outlet property="heightVal" destination="9El-1f-UwA" id="KB4-vy-V3I"/>
+                        <outlet property="idLbl" destination="oGQ-Zl-rbz" id="aR8-gn-fAq"/>
+                        <outlet property="idNum" destination="h6S-yq-Oux" id="waQ-7G-qf8"/>
                         <outlet property="nameLbl" destination="y1s-w9-3G7" id="mmK-3N-x25"/>
+                        <outlet property="selectedPokeImg" destination="VlB-0u-irG" id="y0g-zl-siK"/>
+                        <outlet property="weightVal" destination="ceE-Yd-ge6" id="gzI-OQ-qZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtj-xo-yg9" userLabel="First Responder" sceneMemberID="firstResponder"/>

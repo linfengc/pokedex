@@ -50,6 +50,7 @@ public class CSV {
             }
             
             var row = Dictionary<String, String>()
+            //this is like the split function in java
             let values = line.componentsSeparatedByCharactersInSet(self.delimiter)
             for (index, header) in self.headers.enumerate() {
                 if index < values.count {
