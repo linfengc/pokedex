@@ -1,4 +1,6 @@
 # pokedex
 
-will be uploaded once the AR feature is added 
-should be up on around 9/10  
+#This project is from the course iOS 9 and Swift 2: From Beginner to Paid Professional on udemy by Mark Price
+##
+#currently working on adding a customized AR feature on the camera
+#will be up soon
