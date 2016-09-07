@@ -21,7 +21,6 @@
 		4395126A1D61817700C2C4B6 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439512691D61817700C2C4B6 /* csv.swift */; };
 		4395126C1D61836A00C2C4B6 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4395126B1D61836A00C2C4B6 /* pokemon.ttf */; };
 		439512701D6189E700C2C4B6 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4395126F1D6189E700C2C4B6 /* music.mp3 */; };
-		43A21C331D61B1C700049EFA /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A21C321D61B1C700049EFA /* PokemonDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		439512691D61817700C2C4B6 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		4395126B1D61836A00C2C4B6 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
 		4395126F1D6189E700C2C4B6 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
-		43A21C321D61B1C700049EFA /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				4395122C1D60941800C2C4B6 /* ViewController.swift */,
-				43A21C321D61B1C700049EFA /* PokemonDetailVC.swift */,
 				3FF8B11D1D7F3FF90078EBF2 /* PokeDetailVC.swift */,
 			);
 			name = controller;
@@ -327,7 +324,6 @@
 				3FF8B11E1D7F3FF90078EBF2 /* PokeDetailVC.swift in Sources */,
 				4395122D1D60941800C2C4B6 /* ViewController.swift in Sources */,
 				4395122B1D60941800C2C4B6 /* AppDelegate.swift in Sources */,
-				43A21C331D61B1C700049EFA /* PokemonDetailVC.swift in Sources */,
 				4395125C1D609C1B00C2C4B6 /* Pokemon.swift in Sources */,
 				4395126A1D61817700C2C4B6 /* csv.swift in Sources */,
 			);

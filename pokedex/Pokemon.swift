@@ -31,21 +31,28 @@ class Pokemon {
     }
     
     var weight: String{
-        return _weight
+        get{ return _weight}
+        set{ _weight = weight}
     }
     var height: String{
-        return _height
+        get{return _height}
+        set{_height = height}
     }
+ 
     
-    init(name: String, pokedexId: Int){
+    init(name: String, pokedexId: Int, weight: String, height: String){
         _name = name
         _pokedexId = pokedexId
+        _weight = weight
+        _height = height
     }
     
     var type: String{
         get{ return _type}
         set{ _type = type}
     }
+    
+    
     
     
     

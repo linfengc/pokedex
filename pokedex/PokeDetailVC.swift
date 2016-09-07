@@ -38,8 +38,8 @@ class PokeDetailVC: UIViewController {
         selectedPokeImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
         idNum.text = "\(pokemon.pokedexId)"
         //TO DO: parse weight and height and other info
-       // weightVal.text = (pokemon.weight)
-        //heightVal.text = (pokemon.height)
+        weightVal.text = (pokemon.weight)
+        heightVal.text = (pokemon.height)
         
         
         

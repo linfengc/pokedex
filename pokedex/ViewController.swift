@@ -54,8 +54,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             for row in rows {
                 let pokeId = Int(row["id"]!)! //row is dicitionary and convert it to int
                 let name = row["identifier"]!
-                let poke_i = Pokemon(name: name, pokedexId: pokeId)
-                
+                //get the weight and height from dictionary
+                let weightVal = row["weight"]!
+                let heightVal = row["height"]!
+                let poke_i = Pokemon(name: name, pokedexId: pokeId, weight: weightVal, height: heightVal)
                 pokemon.append(poke_i)
                 
                 
