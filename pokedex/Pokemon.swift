@@ -30,9 +30,22 @@ class Pokemon {
         return _pokedexId
     }
     
+    
+    
     init(name: String, pokedexId: Int){
         _name = name
         _pokedexId = pokedexId
     }
+    
+    var type: String{
+        get{ return _type}
+        set{ _type = type}
+    }
+    
+    
+    
+    
+    
+    
     
 }

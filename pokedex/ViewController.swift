@@ -100,8 +100,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             poke = pokemon[indexPath.row]
         }
         
-        //detailVC<#T##AnyObject?#>
-        performSegueWithIdentifier("PokemonDetailVC", sender: poke)
+        //detailVC 
+        performSegueWithIdentifier("PokeDetailVC", sender: poke)
     }
     
     
@@ -164,8 +164,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "PokemonDetailVC"{
-            if let detailsVC = segue.destinationViewController as? PokemonDetailVC{
+        if segue.identifier == "PokeDetailVC"{
+            if let detailsVC = segue.destinationViewController as? PokeDetailVC{
                 if let poke = sender as? Pokemon{
                     //pokemon clicked(aka sender)
                     detailsVC.pokemon = poke
